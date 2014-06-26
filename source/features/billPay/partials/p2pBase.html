@@ -1,0 +1,9 @@
+<h2>{{title}}</h2>
+<select data-ng-model="p2p.payToAccount"
+        data-ng-options="account.display for account in paymentOptions" ng-change="checkType(p2p.payToAccount)">
+    <option value="">Choose a pay from account</option>
+    </select>
+        <br>
+        <p>
+            <ui-view></ui-view>
+        </p>

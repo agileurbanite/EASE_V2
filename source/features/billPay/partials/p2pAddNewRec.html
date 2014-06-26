@@ -1,0 +1,16 @@
+Add New Payment Recipient
+<p>
+    {{error}}
+</p>
+<p>
+    Name: <input type="text" data-ng-model="payer.payName" placeholder="Please Enter the name">
+</p>
+<p>
+    Email: <input type="text" data-ng-model="payer.payEmail" placeholder="Please Enter the email">
+</p>
+<p>
+    Account Number: <input type="text" data-ng-model="payer.payAccountNumber" placeholder="Please Enter the Account Number">
+</p>
+<p>
+   <input type="button" ng-click="submitRec(payer)" value="SUBMIT">
+</p>

@@ -1,0 +1,24 @@
+Create Payment
+<p>
+    {{error}}
+</p>
+<p>
+    Account Number: <input type="text" value="{{payToAccount.accountNumber}}" readonly>
+</p>
+<p>
+    Email: <input type="text" value="{{payToAccount.email}}" readonly>
+</p>
+<p>
+    <select data-ng-model="payFromAccount"
+            data-ng-options="account.display for account in accounts" ng-change="setAvail(payFromAccount)">
+        <option value="">Choose a pay from account</option>
+    </select>
+    <p>
+    {{available}}
+    </p>
+</p>
+<p>
+    Amount:<input type="text" ng-model="payAmount" placeholder="PLEASE ENTER AN AMOUNT" >
+</p>
+
+<input type="button" ng-click="initatePayment(payFromAccount, payAmount)" value="Pay Person">
